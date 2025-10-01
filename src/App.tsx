@@ -16,8 +16,14 @@ export default function App() {
   const { signMessageAsync, isPending: isSignPending, error: signError } = useSignMessage();
 
   const [to, setTo] = useState("");
+  const [showSign, setShowSign] = useState("");
   const [amount, setAmount] = useState("0.001");
-  const [message, setMessage] = useState("Hello from wagmi + viem");
+  const [message, setMessage] = useState("Hello from wagmi + viem 1122");
+
+  async function toSign() {
+    const sig = await signMessageAsync({ message });
+    setShowSign(sig);
+  }
 
   return (
     <div className="max-w-3xl mx-auto p-4 font-sans">
@@ -68,15 +74,12 @@ export default function App() {
         />
         <button
           disabled={!isConnected || isSignPending}
-          onClick={async () => {
-            const sig = await signMessageAsync({ message });
-            alert(`签名: ${sig}`);
-          }}
+          onClick={toSign}
           className="inline-flex items-center rounded-md bg-emerald-600 px-3 py-1 text-sm text-white hover:bg-emerald-700 disabled:opacity-50"
         >
           签名
         </button>
-        <div className="text-sm text-red-500 mt-2">{signError?.message}</div>
+        <div className="text-sm text-red-500 mt-2">{showSign ? showSign : signError?.message}</div>
       </section>
 
       <section>
