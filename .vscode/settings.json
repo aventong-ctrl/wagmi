@@ -1,0 +1,39 @@
+{
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.words": ["viem", "wagmi"],
+  "eslint.workingDirectories": [{ "mode": "auto" }],
+  // https://github.com/tailwindlabs/tailwindcss-intellisense?tab=readme-ov-file#editorquicksuggestions
+  "editor.quickSuggestions": {
+    "strings": "on"
+  },
+  "tailwindCSS.experimental.classRegex": [
+    // [
+    //   "tv\\((([^()]*|\\([^()]*\\))*)\\)",
+    //   "[\"'`]([^\"'`]*).*?[\"'`]",
+    //   "extendVariants\\((([^()]*|\\([^()]*\\))*)\\)"
+    // ]
+    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
+  ],
+  "search.exclude": {
+    "**/.next": true
+  },
+  // 文档地址：https://github.com/lokalise/i18n-ally/wiki/Configurations
+  "i18n-ally.localesPaths": ["apps/web/src/i18n/locales"],
+  "i18n-ally.enabledFrameworks": ["i18next", "react-i18next"],
+  "i18n-ally.pathMatcher": "{locale}/{namespace}.json",
+  "i18n-ally.namespace": true,
+  "i18n-ally.sourceLanguage": "zh-CN",
+  "i18n-ally.displayLanguage": "zh-CN",
+  "i18n-ally.keystyle": "flat",
+  "aide.convertLanguagePairs": {
+    "typescriptreact": "typescriptreact"
+  },
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  }
+}
