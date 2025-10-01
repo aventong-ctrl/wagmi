@@ -2,20 +2,13 @@
   "typescript.tsdk": "node_modules/typescript/lib",
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
-  "cSpell.words": ["viem", "wagmi"],
+  "cSpell.words": ["viem", "wagmi", "keccak256", "tailwind"],
   "eslint.workingDirectories": [{ "mode": "auto" }],
   // https://github.com/tailwindlabs/tailwindcss-intellisense?tab=readme-ov-file#editorquicksuggestions
   "editor.quickSuggestions": {
     "strings": "on"
   },
-  "tailwindCSS.experimental.classRegex": [
-    // [
-    //   "tv\\((([^()]*|\\([^()]*\\))*)\\)",
-    //   "[\"'`]([^\"'`]*).*?[\"'`]",
-    //   "extendVariants\\((([^()]*|\\([^()]*\\))*)\\)"
-    // ]
-    ["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]
-  ],
+  "tailwindCSS.experimental.classRegex": [["([\"'`][^\"'`]*.*?[\"'`])", "[\"'`]([^\"'`]*).*?[\"'`]"]],
   "search.exclude": {
     "**/.next": true
   },
