@@ -18,7 +18,7 @@ export default function App() {
   const [to, setTo] = useState("");
   const [showSign, setShowSign] = useState("");
   const [amount, setAmount] = useState("0.001");
-  const [message, setMessage] = useState("Hello from wagmi + viem 1122");
+  const [message, setMessage] = useState("Hello from wagmi + viem");
 
   async function toSign() {
     const sig = await signMessageAsync({ message });
@@ -30,7 +30,7 @@ export default function App() {
       <h1 className="text-2xl font-bold mb-4">wagmi + viem</h1>
 
       <section className="mb-6">
-        <h2 className="text-lg font-semibold mb-2">钱包连接</h2>
+        <h2 className="text-lg font-semibold mb-2">Wallet Connection</h2>
         {isConnected ? (
           <div className="space-y-1">
             <div className="text-sm text-gray-700 dark:text-gray-300">已连接: {address}</div>

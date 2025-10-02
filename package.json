@@ -1,5 +1,5 @@
 {
-  "name": "wagmi-viem-tutorial",
+  "name": "wagmi-viem",
   "private": true,
   "version": "0.1.0",
   "type": "module",
@@ -13,14 +13,6 @@
     "format:check": "prettier --check .",
     "prepare": "husky"
   },
-  "keywords": [
-    "wagmi",
-    "viem",
-    "web3",
-    "vite",
-    "react",
-    "tutorial"
-  ],
   "author": "",
   "license": "MIT",
   "packageManager": "pnpm@10.12.3",
