@@ -4,6 +4,7 @@ import { injected, walletConnect } from "wagmi/connectors";
 
 // VITE_WALLETCONNECT_PROJECT_ID is the projectId for WalletConnect
 const { VITE_WALLETCONNECT_PROJECT_ID } = import.meta.env;
+
 export const config = createConfig({
   chains: [mainnet, sepolia],
   transports: {
