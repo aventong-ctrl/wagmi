@@ -28,5 +28,8 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
-  }
+  },
+  "tailwindCSS.experimental.configFile": "./tailwind.config.js",
+  "tailwindCSS.emmetCompletions": true,
+  "editor.hover.enabled": true
 }
