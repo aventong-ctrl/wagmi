@@ -6,7 +6,7 @@ export default function Signature() {
   const { signMessageAsync, isPending: isSignPending, error: signError } = useSignMessage();
 
   const [showSign, setShowSign] = useState("");
-  const [message, setMessage] = useState("Hello from wagmi + viem");
+  const [message, setMessage] = useState("Hello from wagmi + viem 1013");
 
   async function toSign() {
     const sig = await signMessageAsync({ message });
