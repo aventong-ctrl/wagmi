@@ -6,7 +6,7 @@ export default function Signature() {
   const { signMessageAsync, isPending: isSignPending, error: signError } = useSignMessage();
 
   const [showSign, setShowSign] = useState("");
-  const [message, setMessage] = useState("Hello from wagmi + viem");
+  const [message, setMessage] = useState("Hello from wagmi + viem 1013");
 
   async function toSign() {
     const sig = await signMessageAsync({ message });
@@ -29,7 +29,7 @@ export default function Signature() {
         签名
       </button>
       {/* 签名结果 展示文字内容自动换行 */}
-      <div className="text-sm text-red-500 mt-2 break-words">{showSign ? showSign : signError?.message}</div>
+      <div className="text-sm text-gray-500 mt-2 break-words border bg-gray-200 p-4 rounded ">{showSign ? showSign : signError?.message}</div>
     </section>
   );
 }
