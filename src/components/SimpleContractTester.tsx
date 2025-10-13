@@ -4,7 +4,8 @@ import NetworkChecker from "./NetworkChecker";
 
 // 这是一个在 Sepolia 上已经部署的简单合约地址
 // 您也可以使用 Remix 或其他工具部署自己的合约
-const SIMPLE_CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3" as `0x${string}`;
+// const SIMPLE_CONTRACT_ADDRESS = "0x5FbDB2315678afecb367f032d93F642f64180aa3" as `0x${string}`;
+const SIMPLE_CONTRACT_ADDRESS = "0x6cee97953141d8437981f405a99c4fef39cb4b60" as `0x${string}`;
 
 // 简单合约的 ABI - 包含基本的读写功能
 const SIMPLE_CONTRACT_ABI = [
