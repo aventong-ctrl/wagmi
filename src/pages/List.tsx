@@ -3,17 +3,13 @@ import { useAccount, useBalance, useReadContract, useWriteContract, useWatchCont
 import { simpleStorageAbi } from "@abis/simpleStorageAbi"; // 合约对应的 ABI
 
 // 这个是部署好的合约地址
-const CONTRACT_ADDRESS = "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0";
+const CONTRACT_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
 
 export default function TestContract() {
   const { address, chainId } = useAccount();
   const { writeContract, isPending } = useWriteContract(); // 2️⃣ 发送交易（写入新值）
   const [newNumber, setNewNumber] = useState("");
-  const { data: balance } = useBalance({
-    address,
-    chainId: chainId as 31337 | undefined,
-    query: { enabled: !!address },
-  });
+
   // 1️⃣ 读取余额（当前存储的值）
   const { data: currentValue, refetch } = useReadContract({
     address: CONTRACT_ADDRESS,

@@ -1,4 +1,4 @@
-import { createConfig, http, Config, webSocket, fallback } from "wagmi";
+import { createConfig, Config, webSocket } from "wagmi";
 import { anvil } from "./localChain";
 
 export const config: Config = createConfig({
