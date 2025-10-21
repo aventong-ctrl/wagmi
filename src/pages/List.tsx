@@ -3,7 +3,7 @@ import { useAccount, useBalance, useReadContract, useWriteContract, useWatchCont
 import { simpleStorageAbi } from "@abis/simpleStorageAbi"; // 合约对应的 ABI
 
 // 这个是部署好的合约地址
-const CONTRACT_ADDRESS = "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512";
+const CONTRACT_ADDRESS = "0x9fe46736679d2d9a65f0992f2272de9f3c7fa6e0";
 
 export default function TestContract() {
   const { address, chainId } = useAccount();
@@ -44,7 +44,7 @@ export default function TestContract() {
 
   return (
     <div style={{ padding: "20px", fontFamily: "sans-serif" }}>
-      <h2 className="mb-4">🧪 wagmi 合约测试 ✅ ✅ </h2>
+      <h2 className="mb-4">Anvil wagmi 合约测试</h2>
 
       <p className="">
         <strong>当前值:</strong> {currentValue?.toString() ?? "Loading..."}
